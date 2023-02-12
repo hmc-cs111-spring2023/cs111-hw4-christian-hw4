@@ -17,15 +17,31 @@ def getRandomColor(): Color =
 
 /** Given four colors, make a board from them */
 def makeBoardFromColors(c1: Color, c2: Color, c3: Color, c4: Color): Board =
-  List(c1, c2, c3, c4).mkString("_")
+  List(c1, c2, c3, c4).mkString("")
 
 /** Create a random board */
 def getRandomBoard(): Board =
-  makeBoardFromColors(getRandomColor(), getRandomColor(), getRandomColor(), getRandomColor)
+  makeBoardFromColors(getRandomColor(), getRandomColor(), getRandomColor(), getRandomColor())
 
 /** Play one round of the game */
 def playRound(board: Board): (Int, Int) =
-  val guess = 
+  var firstGuess: Char = 'a'
+  while (!validColors.contains(firstGuess)) {
+    firstGuess = readLine("Enter a guess for spot 1: ").toCharArray().head
+  }
+  var secondGuess: Char = 'a'
+  while (!validColors.contains(secondGuess)) {
+    secondGuess = readLine("Enter a guess for spot 2: ").toCharArray().head
+  }
+  var thirdGuess: Char = 'a'
+  while (!validColors.contains(thirdGuess)) {
+    thirdGuess = readLine("Enter a guess for spot 3: ").toCharArray().head
+  }
+  var fourthGuess : Char = 'a'
+  while (!validColors.contains(fourthGuess)) {
+    fourthGuess = readLine("Enter a guess for spot 4: ").toCharArray().head
+  }
+  val guess = makeBoardFromColors(firstGuess, secondGuess, thirdGuess, fourthGuess)
   scoreGuess(board, guess)
 
 /** Score a guess
