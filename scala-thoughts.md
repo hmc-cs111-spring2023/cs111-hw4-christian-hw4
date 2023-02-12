@@ -1,0 +1,9 @@
+I found it easy to keep track of data types in Scala. The explicit typing did mean that at times I had to spend extra time defining types for functions in which the type felt intutitive, such as for collatz. However, this was useful later when trying to debug and find issues in the code, such as for the guessing game, since all the types were visible.
+
+My favorite language design choice is how easy it is to do method chaining. It makes the code much easiser to read and write when you have to freedom to perform multiple operations in the same line without constantly having to perform assignment operations.
+
+My least favortie design choice is the syntax of "var" and "val", the two look so similar, especially lowercased, that it makes it difficult to distinguish between the meaning of each of them. This is also something that is much clearer in other languages which makes it particularly frustrating to see that they chose this different convention. I think that they made this choice because the names reflect the meaning of what is being done when assigning a variable and a value. 
+
+I would like to learn more about why the implementers decided to allow functions to be briefly defined in a few lines (or even one line), this leads the language to look very different from others where it is more common to have more white space and vertical spacing. Also, looping seems a bit odd, I would like to learn more about that to better understand how to accurately interpret the code.
+
+Overall I enjoyed the experience using Scala and I found that it shared much in common with most other popular programming languages, without any significant barriers for getting started writing code.
